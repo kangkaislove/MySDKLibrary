@@ -6,7 +6,7 @@ target 'MySDKLibrary' do
 
     pod 'Alamofire'
     pod 'CocoaLumberjack/Swift'
-    pod 'CryptoSwift'
+    pod 'CryptoSwift','0.8.0'
     pod 'GzipSwift'
 end
 
