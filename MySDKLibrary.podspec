@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name         = "MySDKLibrary"        #名称
-s.version      = "1.0.0"              #版本号
+s.version      = "1.0.1"              #版本号
 s.summary      = "this pod only use to test."       #简短介绍
 s.description  = <<-DESC
                               这是我用来做私有Pods测试的，所以随便写点什么的。
@@ -25,7 +25,8 @@ s.author             = { "kangkai" => "214525789@qq.com" }
 
 s.source       = { :git => "https://github.com/kangkaislove/MySDKLibrary.git", :tag => s.version}
 
-s.platform     = :ios, "8.0"          #支持的平台及版本，这里我们呢用swift
+s.platform     = :ios, "8.0"          #支持的平台及版本，这里我们swift
+s.swift_version = "4.0" // swift语言的版本
 
 s.dependency 'Alamofire','4.6.0'
 s.dependency 'CocoaLumberjack/Swift','3.3.0'
