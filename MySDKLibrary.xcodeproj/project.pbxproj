@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56C2402A4B25B910C74B25FB /* Pods_MySDKLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA5B329D73473724D6348EE /* Pods_MySDKLibrary.framework */; };
 		9FEA7D7E2107093400174B0C /* MySDKLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FEA7D7C2107093400174B0C /* MySDKLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3072347EB65BE337CD79AEDB /* Pods-MySDKLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySDKLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MySDKLibrary/Pods-MySDKLibrary.debug.xcconfig"; sourceTree = "<group>"; };
+		89ADEC3B947388E7086D3354 /* Pods-MySDKLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySDKLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySDKLibrary/Pods-MySDKLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		9FEA7D792107093400174B0C /* MySDKLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MySDKLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FEA7D7C2107093400174B0C /* MySDKLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySDKLibrary.h; sourceTree = "<group>"; };
 		9FEA7D7D2107093400174B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFA5B329D73473724D6348EE /* Pods_MySDKLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySDKLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +25,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C2402A4B25B910C74B25FB /* Pods_MySDKLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2161E2CD2E31B94E3956ADE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3072347EB65BE337CD79AEDB /* Pods-MySDKLibrary.debug.xcconfig */,
+				89ADEC3B947388E7086D3354 /* Pods-MySDKLibrary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB89DC8E73A0A26DF187A71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFA5B329D73473724D6348EE /* Pods_MySDKLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9FEA7D6F2107093400174B0C = {
 			isa = PBXGroup;
 			children = (
 				9FEA7D7B2107093400174B0C /* MySDKLibrary */,
 				9FEA7D7A2107093400174B0C /* Products */,
+				2161E2CD2E31B94E3956ADE6 /* Pods */,
+				7DB89DC8E73A0A26DF187A71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +94,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FEA7D812107093400174B0C /* Build configuration list for PBXNativeTarget "MySDKLibrary" */;
 			buildPhases = (
+				CF3172B7BAAE70958E4F0F85 /* [CP] Check Pods Manifest.lock */,
 				9FEA7D742107093400174B0C /* Sources */,
 				9FEA7D752107093400174B0C /* Frameworks */,
 				9FEA7D762107093400174B0C /* Headers */,
@@ -125,6 +150,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CF3172B7BAAE70958E4F0F85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MySDKLibrary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9FEA7D742107093400174B0C /* Sources */ = {
@@ -252,6 +298,7 @@
 		};
 		9FEA7D822107093400174B0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3072347EB65BE337CD79AEDB /* Pods-MySDKLibrary.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -272,6 +319,7 @@
 		};
 		9FEA7D832107093400174B0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89ADEC3B947388E7086D3354 /* Pods-MySDKLibrary.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
