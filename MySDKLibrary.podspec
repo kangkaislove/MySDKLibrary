@@ -25,8 +25,8 @@ s.author             = { "kangkai" => "214525789@qq.com" }
 
 s.source       = { :git => "https://github.com/kangkaislove/MySDKLibrary.git", :tag => s.version}
 
-s.platform     = :ios, "8.0"          #支持的平台及版本，这里我们swift
-s.swift_version = "4.0" // swift语言的版本
+s.platform     = :ios, "8.0"  #支持的平台及版本，这里我们swift
+s.swift_version = "4.0"   #swift语言的版本
 
 s.dependency 'Alamofire','4.6.0'
 s.dependency 'CocoaLumberjack/Swift','3.3.0'
